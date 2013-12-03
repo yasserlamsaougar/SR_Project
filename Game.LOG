@@ -1,0 +1,32 @@
+déc. 02, 2013 11:57:14 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-127.0.0.1: [127.0.0.1: sun.rmi.registry.RegistryImpl[0:0:0, 0]: void bind(java.lang.String, java.rmi.Remote)]
+déc. 02, 2013 11:57:14 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(2)-192.168.1.15: [192.168.1.15: sun.rmi.transport.DGCImpl[0:0:0, 2]: java.rmi.dgc.Lease dirty(java.rmi.server.ObjID[], long, java.rmi.dgc.Lease)]
+déc. 02, 2013 11:57:18 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(3)-127.0.0.1: [127.0.0.1: sun.rmi.registry.RegistryImpl[0:0:0, 0]: java.rmi.Remote lookup(java.lang.String)]
+déc. 02, 2013 11:57:18 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(4)-192.168.1.15: [192.168.1.15: sun.rmi.transport.DGCImpl[0:0:0, 2]: java.rmi.dgc.Lease dirty(java.rmi.server.ObjID[], long, java.rmi.dgc.Lease)]
+déc. 02, 2013 11:57:18 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(4)-192.168.1.15: [192.168.1.15: server.ServiceImplementation[90829fc:142b587a125:-7fff, 2685919756264234101]: public abstract server.MapData server.ServerService.getMap() throws java.rmi.RemoteException]
+déc. 02, 2013 11:57:18 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(4)-192.168.1.15: [192.168.1.15: server.ServiceImplementation[90829fc:142b587a125:-7fff, 2685919756264234101]: public abstract server.PlayerData server.ServerService.connect(client.GameRemote) throws java.rmi.RemoteException]
+déc. 02, 2013 11:57:47 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(5)-127.0.0.1: [127.0.0.1: sun.rmi.registry.RegistryImpl[0:0:0, 0]: java.rmi.Remote lookup(java.lang.String)]
+déc. 02, 2013 11:57:47 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(6)-192.168.1.15: [192.168.1.15: sun.rmi.transport.DGCImpl[0:0:0, 2]: java.rmi.dgc.Lease dirty(java.rmi.server.ObjID[], long, java.rmi.dgc.Lease)]
+déc. 02, 2013 11:57:47 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(6)-192.168.1.15: [192.168.1.15: server.ServiceImplementation[90829fc:142b587a125:-7fff, 2685919756264234101]: public abstract server.MapData server.ServerService.getMap() throws java.rmi.RemoteException]
+déc. 02, 2013 11:57:48 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(6)-192.168.1.15: [192.168.1.15: server.ServiceImplementation[90829fc:142b587a125:-7fff, 2685919756264234101]: public abstract server.PlayerData server.ServerService.connect(client.GameRemote) throws java.rmi.RemoteException]
+déc. 02, 2013 11:58:13 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(7)-192.168.1.15: [192.168.1.15: server.ServiceImplementation[90829fc:142b587a125:-7fff, 2685919756264234101]: public abstract void server.ServerService.disconnect(int) throws java.rmi.RemoteException]
+déc. 02, 2013 11:58:14 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(6)-192.168.1.15: [192.168.1.15: server.ServiceImplementation[90829fc:142b587a125:-7fff, 2685919756264234101]: public abstract void server.ServerService.disconnect(int) throws java.rmi.RemoteException]
+déc. 02, 2013 11:59:24 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(8)-127.0.0.1: [127.0.0.1: sun.rmi.registry.RegistryImpl[0:0:0, 0]: java.rmi.Remote lookup(java.lang.String)]
+déc. 02, 2013 11:59:24 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(9)-192.168.1.15: [192.168.1.15: sun.rmi.transport.DGCImpl[0:0:0, 2]: java.rmi.dgc.Lease dirty(java.rmi.server.ObjID[], long, java.rmi.dgc.Lease)]
+déc. 02, 2013 11:59:24 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(9)-192.168.1.15: [192.168.1.15: server.ServiceImplementation[90829fc:142b587a125:-7fff, 2685919756264234101]: public abstract server.MapData server.ServerService.getMap() throws java.rmi.RemoteException]
+déc. 02, 2013 11:59:24 PM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(9)-192.168.1.15: [192.168.1.15: server.ServiceImplementation[90829fc:142b587a125:-7fff, 2685919756264234101]: public abstract server.PlayerData server.ServerService.connect(client.GameRemote) throws java.rmi.RemoteException]
