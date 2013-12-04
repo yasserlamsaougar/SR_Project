@@ -23,10 +23,17 @@ public class GameMap {
 		this.MapWidth = MapWidth;
 	}
 
+	/**
+	 * 
+	 * @return The number of points in the map
+	 */
 	public int getNumberOfPoints() {
 		return numberOfPoints;
 	}
 
+	/**
+	 * generates The map 
+	 */
 	public void generateMap() {
 		System.out.println(getNumberOfPoints());
 		for (int i = 0; i < getNumberOfPoints(); i++) {
@@ -38,6 +45,12 @@ public class GameMap {
 		System.out.println("map generated");
 	}
 
+	/**
+	 * Tries to erase a point from the map
+	 * @param x : the x coordinate of the point to erase
+	 * @param y : the y coordinate of the point to erase
+	 * @return was Point erased
+	 */
 	public boolean erasePoint(int x, int y) {
 		int i = 0;
 		for (i = 0; i < getNumberOfPoints(); i++) {
@@ -56,10 +69,18 @@ public class GameMap {
 		return true;
 	}
 
+	/**
+	 * Generates a random Position 
+	 * @return random Point
+	 */
 	public Point giveMeFreePosition() {
 		return generateFreePoint();
 	}
 
+	/**
+	 * Keep the players' position unique   
+	 * @return a free point in the map
+	 */
 	private Point generateFreePoint() {
 		int x = 0;
 		int y = 0;
@@ -70,6 +91,10 @@ public class GameMap {
 		return new Point(x, y);
 	}
 	
+	/**
+	 * Checks if the number of points is null
+	 * @return is there any point left
+	 */
 	public boolean isEmpty() {
 		return numberOfPoints == 0;
 	}

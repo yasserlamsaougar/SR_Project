@@ -32,7 +32,7 @@ public class GameScreen extends JPanel {
 	}
 	
 	public void build() {
-		setPreferredSize(new Dimension((gridSize+1)*cellSize, cellSize*(gridSize + 1)));
+		setPreferredSize(new Dimension((gridSize+3)*cellSize, cellSize*(gridSize + 3)));
 		gameMap = new Target[gridSize][gridSize];
 		generateMap(positions);
 	}
@@ -101,9 +101,9 @@ public class GameScreen extends JPanel {
 		return moveTable.get(key);
 	}
 
-	private void generateMap(List<Point> positions2) {
+	public void generateMap(List<Point> positions) {
 
-		List<Point> list = positions2;
+		List<Point> list = positions;
 		for (Point p : list) {
 			gameMap[p.x][p.y] = new Target(this);
 			gameMap[p.x][p.y].setGridPos(p);
@@ -145,6 +145,7 @@ public class GameScreen extends JPanel {
 	
 	@Override
 	protected void paintComponent(Graphics g) {
+		g.drawString("Score: "+score, getWidth() - 60, getHeight() - 50);
 		for(Component comp : getComponents()) {
 			comp.paint(g);
 		}

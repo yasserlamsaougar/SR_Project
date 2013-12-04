@@ -12,6 +12,8 @@ import java.util.Hashtable;
 import java.util.Map;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 import server.ServerService;
 import shared.MapData;
@@ -23,6 +25,7 @@ public class GameManager extends UnicastRemoteObject implements GameService,
 	private JFrame frame;
 	private GameScreen gameScreen;
 	private ServerService server;
+	private LobbyScreen lobbyScreen;
 
 	public GameManager(ServerService server) throws RemoteException {
 		super();
@@ -32,6 +35,7 @@ public class GameManager extends UnicastRemoteObject implements GameService,
 			this.server = server;
 			MapData mapData = server.getMap();
 			this.frame = new JFrame();
+			lobbyScreen = new LobbyScreen(mapData.getMapWidth(), 20, this);
 			gameScreen = new GameScreen();
 			gameScreen.setOwnId(server.connect(this))
 					.setTargetNumber(mapData.getTargetArray().size())
@@ -90,23 +94,97 @@ public class GameManager extends UnicastRemoteObject implements GameService,
 	}
 
 	@Override
-	public void updateMap(Point position) throws RemoteException {
+	public void updatePlayer(Point position) throws RemoteException {
 		gameScreen.updateMap(position);
 		frame.repaint();
 	}
 
 	@Override
 	public void win() throws RemoteException {
-		System.out.println(" YOU WIN ");
+
+		SwingUtilities.invokeLater(new Runnable() {
+
+			@Override
+			public void run() {
+				int n = JOptionPane.showConfirmDialog(gameScreen,
+						" YOU WIN Would you like to replay?",
+						"An Inane Question", JOptionPane.YES_NO_OPTION);
+
+				try {
+					if (n == JOptionPane.YES_OPTION) {
+
+						gameScreen
+								.generateMap(server.getMap().getTargetArray());
+						frame.repaint();
+					}
+
+					else {
+						server.disconnect(gameScreen.getOwnId());
+						System.exit(0);
+					}
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 	@Override
 	public void lose() throws RemoteException {
-		System.out.println("YOU SUCK MAN");
+		SwingUtilities.invokeLater(new Runnable() {
+
+			@Override
+			public void run() {
+				int n = JOptionPane
+						.showConfirmDialog(
+								gameScreen,
+								" YOU LOSE WOULD YOU LIKE TO REPLAY Would you like to replay?",
+								"An Inane Question", JOptionPane.YES_NO_OPTION);
+
+				try {
+					if (n == JOptionPane.YES_OPTION) {
+						gameScreen
+								.generateMap(server.getMap().getTargetArray());
+						frame.repaint();
+					}
+
+					else {
+						server.disconnect(gameScreen.getOwnId());
+						System.exit(0);
+					}
+
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 	@Override
 	public void updateScore(int score) throws RemoteException {
 		gameScreen.updateScore(score);
 	}
+
+	public void ready() {
+		try {
+			gameScreen.setOwnId(server.connect(this));
+			lobbyScreen.addToModel("User" + gameScreen.getOwnId());
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void disconnect() {
+		try {
+			server.disconnect(gameScreen.getOwnId());
+			lobbyScreen.removeFromModel("User" + gameScreen.getOwnId());
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 }

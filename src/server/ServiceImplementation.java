@@ -16,14 +16,24 @@ import client.GameService;
 public class ServiceImplementation extends UnicastRemoteObject implements
 		ServerService {
 
-	private final Hashtable<Integer, GameService> table;
+	/**
+	 * This Map Stores the Players By Id
+	 */
+	private final Hashtable<Integer, GameService> playerMap;
+	/**
+	 * This is where the scores and Positions are stored
+	 */
 	private final PlayerStore store;
-	protected GameMap map;
+
+	/**
+	 * The map that will be generated
+	 */
+	private GameMap map;
 
 	protected ServiceImplementation() throws RemoteException {
 		super();
-		table = new Hashtable<>();
-		map = new GameMap(100, 20, 20);
+		playerMap = new Hashtable<>();
+		map = new GameMap(1, 20, 20);
 		store = new PlayerStore();
 		map.generateMap();
 		try {
@@ -39,11 +49,11 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 
 		Point point = map.giveMeFreePosition();
 		int oldId = store.getLastId();
-		for (Entry<Integer, GameService> r : table.entrySet()) {
+		for (Entry<Integer, GameService> r : playerMap.entrySet()) {
 			GameService iterable = r.getValue();
 			iterable.addPlayer(oldId, point);
 		}
-		table.put(oldId, remote);
+		playerMap.put(oldId, remote);
 		store.addPlayer(oldId, point);
 		for (Entry<Integer, LinkedList<Point>> r : store.getPlayerPositions()) {
 			Point player = store.getPlayerPosition(r.getKey());
@@ -54,15 +64,18 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 
 	@Override
 	public void disconnect(int id) throws RemoteException {
-		table.remove(id);
-		store.removePlayer(id);
-		for (GameService remote : table.values()) {
+		
+		for (GameService remote : playerMap.values()) {
 			remote.removePlayer(id);
 		}
+		playerMap.remove(id);
+		store.removePlayer(id);
+
 	}
 
 	@Override
 	public MapData getMap() throws RemoteException {
+
 		MapData mapData = new MapData(map.MapWidth, map.MapHeight,
 				map.targetArray);
 		return mapData;
@@ -75,27 +88,30 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 		point.y = (point.y + direction[1] + map.MapWidth) % map.MapWidth;
 		if (map.erasePoint(point.x, point.y)) {
 			store.incrementScore(id);
-			for (Entry<Integer, GameService> r : table.entrySet()) {
+			for (Entry<Integer, GameService> r : playerMap.entrySet()) {
 				GameService iterable = r.getValue();
 				iterable.updatePosition(new PlayerData(point, store
 						.getPlayerScore(r.getKey()), id));
-				iterable.updateMap(point);
-				table.get(id).updateScore(store.getPlayerScore(id));
+				iterable.updatePlayer(point);
+				playerMap.get(id).updateScore(store.getPlayerScore(id));
 			}
-			if (map.isEmpty()) {
-				int winner = store.getWinner();
-				GameService remote = table.remove(winner);
-				for(GameService r : table.values())
-					r.lose();
-				remote.win();
-				table.put(winner, remote);
-			}
+
 		} else {
-			for (Entry<Integer, GameService> r : table.entrySet()) {
+			for (Entry<Integer, GameService> r : playerMap.entrySet()) {
 				GameService iterable = r.getValue();
 				iterable.updatePosition(new PlayerData(point, store
 						.getPlayerScore(r.getKey()), id));
 			}
+		}
+		if (map.isEmpty()) {
+			int winner = store.getWinner();
+			GameService remote = playerMap.remove(winner);
+			for (GameService r : playerMap.values())
+				r.lose();
+			remote.win();
+			playerMap.put(winner, remote);
+			map = new GameMap(1, 20, 20);
+			map.generateMap();
 		}
 
 	}

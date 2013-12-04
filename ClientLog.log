@@ -1,0 +1,103 @@
+déc. 04, 2013 7:42:07 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: sun.rmi.transport.DGCImpl[0:0:0, 2]: java.rmi.dgc.Lease dirty(java.rmi.server.ObjID[], long, java.rmi.dgc.Lease)]
+déc. 04, 2013 7:42:07 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.addPlayer(int,java.awt.Point) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:07 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.addPlayer(int,java.awt.Point) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:09 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:09 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:10 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:11 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:11 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:11 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:11 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:11 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:11 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.updateMap(java.awt.Point) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:11 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.lose() throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:14 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-55919d3b:142bc578a42:-7ffe, -7736841588632379072]: public abstract void client.GameService.removePlayer(int) throws java.rmi.RemoteException]
+eption]
+déc. 04, 2013 7:42:11 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.win() throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:14 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.removePlayer(int) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:16 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:16 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:17 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updatePosition(shared.PlayerData) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updateMap(java.awt.Point) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.updateScore(int) throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:18 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.win() throws java.rmi.RemoteException]
+déc. 04, 2013 7:42:19 AM sun.rmi.server.UnicastServerRef logCall
+FINER: RMI TCP Connection(1)-192.168.1.15: [192.168.1.15: client.GameManager[-3245db3e:142bc5798b9:-7ffe, -8100159719213309273]: public abstract void client.GameService.removePlayer(int) throws java.rmi.RemoteException]
