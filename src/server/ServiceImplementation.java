@@ -30,10 +30,17 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 	 */
 	private GameMap map;
 
+<<<<<<< HEAD
 	public ServiceImplementation() throws RemoteException {
 		super();
 		playerMap = new Hashtable<>();
 		map = new GameMap(10, 20, 20);
+=======
+	protected ServiceImplementation() throws RemoteException {
+		super();
+		playerMap = new Hashtable<>();
+		map = new GameMap(1, 20, 20);
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 		store = new PlayerStore();
 		map.generateMap();
 		try {
@@ -72,10 +79,17 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 		store.removePlayer(id);
 
 	}
+<<<<<<< HEAD
 	
 
 	@Override
 	public MapData getMap() throws RemoteException {
+=======
+
+	@Override
+	public MapData getMap() throws RemoteException {
+
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 		MapData mapData = new MapData(map.MapWidth, map.MapHeight,
 				map.targetArray);
 		return mapData;
@@ -110,11 +124,16 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 				r.lose();
 			remote.win();
 			playerMap.put(winner, remote);
+<<<<<<< HEAD
 			map = new GameMap(10, 20, 20);
+=======
+			map = new GameMap(1, 20, 20);
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 			map.generateMap();
 		}
 
 	}
+<<<<<<< HEAD
 
 	@Override
 	public Point getPlayerPosition(int id) throws RemoteException {
@@ -127,4 +146,6 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 		
 		return playerMap.size();
 	}
+=======
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 }

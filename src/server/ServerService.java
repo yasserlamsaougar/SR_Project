@@ -1,6 +1,9 @@
 package server;
 
+<<<<<<< HEAD
 import java.awt.Point;
+=======
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
@@ -38,6 +41,7 @@ public interface ServerService extends Remote {
 	 */
 	public void move(int id, int[] direction) throws RemoteException;
 	
+<<<<<<< HEAD
 	/**
 	 * Test Utility Method
 	 * @param id
@@ -52,4 +56,6 @@ public interface ServerService extends Remote {
 	public int testConnect() throws RemoteException;
 	
 	
+=======
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 }

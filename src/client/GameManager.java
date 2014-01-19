@@ -6,10 +6,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.Serializable;
+<<<<<<< HEAD
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+=======
+import java.rmi.RemoteException;
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Hashtable;
 import java.util.Map;
@@ -19,7 +23,10 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 import server.ServerService;
+<<<<<<< HEAD
 import shared.CONSTANTS;
+=======
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 import shared.MapData;
 import shared.PlayerData;
 
@@ -29,6 +36,10 @@ public class GameManager extends UnicastRemoteObject implements GameService,
 	private JFrame frame;
 	private GameScreen gameScreen;
 	private ServerService server;
+<<<<<<< HEAD
+=======
+	private LobbyScreen lobbyScreen;
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 
 	public GameManager(ServerService server) throws RemoteException {
 		super();
@@ -38,6 +49,10 @@ public class GameManager extends UnicastRemoteObject implements GameService,
 			this.server = server;
 			MapData mapData = server.getMap();
 			this.frame = new JFrame();
+<<<<<<< HEAD
+=======
+			lobbyScreen = new LobbyScreen(mapData.getMapWidth(), 20, this);
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 			gameScreen = new GameScreen();
 			gameScreen.setOwnId(server.connect(this))
 					.setTargetNumber(mapData.getTargetArray().size())
@@ -172,6 +187,10 @@ public class GameManager extends UnicastRemoteObject implements GameService,
 	public void ready() {
 		try {
 			gameScreen.setOwnId(server.connect(this));
+<<<<<<< HEAD
+=======
+			lobbyScreen.addToModel("User" + gameScreen.getOwnId());
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -181,11 +200,16 @@ public class GameManager extends UnicastRemoteObject implements GameService,
 	public void disconnect() {
 		try {
 			server.disconnect(gameScreen.getOwnId());
+<<<<<<< HEAD
+=======
+			lobbyScreen.removeFromModel("User" + gameScreen.getOwnId());
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+<<<<<<< HEAD
 	
 	public static void reconnect(ServerService service) {
 		String serverObjectName = "rmi://localhost:" + CONSTANTS.servicePort
@@ -198,5 +222,7 @@ public class GameManager extends UnicastRemoteObject implements GameService,
 			e.printStackTrace();
 		}
 	}
+=======
+>>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 
 }
