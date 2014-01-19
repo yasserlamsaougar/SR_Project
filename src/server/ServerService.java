@@ -51,4 +51,5 @@ public interface ServerService extends Remote {
 	 */
 	public int testConnect() throws RemoteException;
 	
+	public void reconnect(GameService remote) throws RemoteException;
 }

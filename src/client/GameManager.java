@@ -95,7 +95,7 @@ class GameManager extends UnicastRemoteObject implements GameService,
 	}
 
 	@Override
-	public void updatePlayer(Point position) throws RemoteException {
+	public void updateMap(Point position) throws RemoteException {
 		gameScreen.updateMap(position);
 		frame.repaint();
 	}

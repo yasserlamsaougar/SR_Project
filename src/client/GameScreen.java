@@ -137,6 +137,7 @@ public class GameScreen extends JPanel {
 	public void updatePlayer(PlayerData playerData) {
 		Player player = playerMap.get(playerData.getId());
 		player.setGridPos(playerData.getPosition());
+		updateScore(playerData.getScore());
 	}
 	public void updateMap(Point position) {
 		Target target = gameMap[position.x][position.y];

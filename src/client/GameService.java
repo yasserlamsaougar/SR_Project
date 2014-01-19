@@ -35,7 +35,7 @@ public interface GameService extends Remote {
 	 * @param position
 	 * @throws RemoteException
 	 */
-	public void updatePlayer(Point position) throws RemoteException;
+	public void updateMap(Point position) throws RemoteException;
 	
 	/**
 	 * updates the player's score

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import shared.Pair;
+
 public class GameMap {
 
 	protected int[][] gameMap;
@@ -15,7 +17,7 @@ public class GameMap {
 
 	private final Random rand = new Random();
 
-	public GameMap(int numberOfPoints, final int MapWidth, final int MapHeight) {
+	public GameMap(final int numberOfPoints, final int MapWidth, final int MapHeight) {
 		gameMap = new int[MapWidth][MapHeight];
 		targetArray = new ArrayList<>(numberOfPoints);
 		this.numberOfPoints = numberOfPoints;
@@ -42,14 +44,22 @@ public class GameMap {
 			targetArray.add(point);
 
 		}
-		System.out.println("map generated");
+	}
+	
+	public void generateMap(List<Pair> targets) {
+		
+		for(Pair p : targets) {
+			gameMap[p.getX()][p.getY()] = 1;
+			targetArray.add(new Point(p.getX(), p.getY()));
+		}
+		
 	}
 
 	/**
 	 * Tries to erase a point from the map
 	 * @param x : the x coordinate of the point to erase
 	 * @param y : the y coordinate of the point to erase
-	 * @return was Point erased
+	 * @return was the Point erased?
 	 */
 	public boolean erasePoint(int x, int y) {
 		int i = 0;

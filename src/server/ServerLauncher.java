@@ -10,7 +10,8 @@ public class ServerLauncher {
 		System.out.println("Initializing TTTService...");
 		try {
 			Registry registry = LocateRegistry.createRegistry(CONSTANTS.servicePort);
-			ServerService cserv = new ServiceImplementation();
+			ServiceImplementation cserv = new ServiceImplementation();
+			cserv.setUpServer(2);
 			String serverObjectName = "rmi://localhost:" + CONSTANTS.servicePort + "/"
 					+ CONSTANTS.ServiceName;
 			registry.rebind(serverObjectName, cserv);
