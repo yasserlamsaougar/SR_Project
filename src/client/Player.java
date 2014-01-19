@@ -11,10 +11,7 @@ public class Player extends AbstractShape {
 
 	public Player(GameScreen display, Color color) {
 		super(display);
-<<<<<<< HEAD
-=======
 		Random rand = new Random();
->>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 
 		this.color = color;
 	}

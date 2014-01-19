@@ -8,18 +8,11 @@ import java.awt.Point;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-<<<<<<< HEAD
 import java.util.Random;
-=======
->>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-<<<<<<< HEAD
-import shared.CONSTANTS;
-=======
->>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 import shared.PlayerData;
 
 public class GameScreen extends JPanel {
@@ -38,16 +31,11 @@ public class GameScreen extends JPanel {
 		super();
 		playerMap = new HashMap<>();
 	}
-<<<<<<< HEAD
 
-	public void build() {
-		setPreferredSize(new Dimension((gridSize + 3) * cellSize, cellSize
-				* (gridSize + 3)));
-=======
+	
 	
 	public void build() {
 		setPreferredSize(new Dimension((gridSize+3)*cellSize, cellSize*(gridSize + 3)));
->>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 		gameMap = new Target[gridSize][gridSize];
 		generateMap(positions);
 	}
@@ -129,14 +117,10 @@ public class GameScreen extends JPanel {
 		Runnable runnable = new Runnable() {
 			@Override
 			public void run() {
-<<<<<<< HEAD
 				Random rand = new Random();
 				Color c = new Color(rand.nextInt(255), rand.nextInt(255),
 						rand.nextInt(255));
 				Player player = new Player(GameScreen.this, c);
-=======
-				Player player = new Player(GameScreen.this, Color.blue);
->>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 				player.setGridPos(position);
 				playerMap.put(id, player);
 			}
@@ -154,11 +138,6 @@ public class GameScreen extends JPanel {
 		Player player = playerMap.get(playerData.getId());
 		player.setGridPos(playerData.getPosition());
 	}
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 	public void updateMap(Point position) {
 		Target target = gameMap[position.x][position.y];
 		this.remove(target);
@@ -168,7 +147,6 @@ public class GameScreen extends JPanel {
 	public void updateScore(int score) {
 		this.score = score;
 	}
-<<<<<<< HEAD
 
 	@Override
 	protected void paintComponent(Graphics g) {
@@ -178,15 +156,4 @@ public class GameScreen extends JPanel {
 		}
 	}
 
-	
-=======
-	
-	@Override
-	protected void paintComponent(Graphics g) {
-		g.drawString("Score: "+score, getWidth() - 60, getHeight() - 50);
-		for(Component comp : getComponents()) {
-			comp.paint(g);
-		}
-	}
->>>>>>> 7520917c9bc477575e479127a09169c1a281c8de
 }
