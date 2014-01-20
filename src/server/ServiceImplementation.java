@@ -81,11 +81,7 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 	@Override
 	public int connect(GameService remote) throws RemoteException {
 
-		for (Integer key : store.getPlayersRaw().keySet()) {
-			if (!playerMap.containsKey(key)) {
-				store.removePlayer(key);
-			}
-		}
+		
 
 		Point point = map.giveMeFreePosition();
 		int oldId = store.getLastId();
@@ -212,20 +208,18 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 		thread.start();
 	}
 
-	synchronized private void recoverPlayers() {
+	synchronized private GameState recoverPlayers() {
 
 		ObjectMapper mapper = new ObjectMapper();
-
 		try {
-			GameState state = mapper.readValue(new File("state.json"),
+			lastGameState = mapper.readValue(new File("state.json"),
 					GameState.class);
-			store = new PlayerStore();
-			store.setLastId(state.getLastId());
-			store.setPlayers(state.getPlayers());
-
+			store.setPlayers(lastGameState.getPlayers());
+			store.setLastId(lastGameState.getLastId());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return lastGameState;
 
 	}
 
@@ -278,8 +272,9 @@ public class ServiceImplementation extends UnicastRemoteObject implements
 	}
 
 	@Override
-	public void reconnect(GameService remote) throws RemoteException {
-		
+	public void reconnect(GameService remote, int id) throws RemoteException {
+		recoverPlayers();
+		playerMap.put(id, remote);
 	}
 
 }
