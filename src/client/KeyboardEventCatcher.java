@@ -13,11 +13,14 @@ import shared.CONSTANTS;
 public class KeyboardEventCatcher extends KeyAdapter {
 
 	private GameScreen g;
+	private GameManager gameManager;
 	private ServerService service;
 	
-	public KeyboardEventCatcher(GameScreen g, ServerService service) {
+	public KeyboardEventCatcher(GameScreen g, GameManager gameManager, ServerService service) {
 		this.g = g;
+		this.gameManager = gameManager;
 		this.service = service;
+		
 	}
 
 	@Override
@@ -32,17 +35,15 @@ public class KeyboardEventCatcher extends KeyAdapter {
 			service.move(g.getOwnId(), direction);
 			g.repaint();
 		} catch (RemoteException e1) {
-			String serverObjectName = "rmi://localhost:" + CONSTANTS.servicePort
-					+ "/" + CONSTANTS.ServiceName;
+			String serverObjectName = "rmi://localhost:" + CONSTANTS.b_servicePort
+					+ "/" + CONSTANTS.b_ServiceName;
 			try {
-				Registry registry = LocateRegistry.getRegistry(null, CONSTANTS.servicePort);
+				Registry registry = LocateRegistry.getRegistry(null, CONSTANTS.b_servicePort);
 				service = (ServerService) registry.lookup(serverObjectName);
+				service.reconnect(gameManager, g.getOwnId());
 			} catch (RemoteException | NotBoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				
 			}
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
 		}
 
 	}
