@@ -57,7 +57,7 @@ class GameManager extends UnicastRemoteObject implements GameService,
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setLocation(30, 30);
-		frame.addWindowListener(new WindowEventCatcher(gameScreen, server));
+		frame.addWindowListener(new WindowEventCatcher(gameScreen,this, server));
 		gameScreen.setVisible(true);
 		frame.add(gameScreen);
 		frame.pack();
@@ -70,7 +70,7 @@ class GameManager extends UnicastRemoteObject implements GameService,
 		moveTable.put(KeyEvent.VK_UP, new int[] { 0, -1 });
 		moveTable.put(KeyEvent.VK_LEFT, new int[] { -1, 0 });
 		moveTable.put(KeyEvent.VK_RIGHT, new int[] { +1, 0 });
-		frame.addKeyListener(new KeyboardEventCatcher(gameScreen, server));
+		frame.addKeyListener(new KeyboardEventCatcher(gameScreen, this, server));
 		return moveTable;
 	}
 
